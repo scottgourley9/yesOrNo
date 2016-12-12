@@ -5,7 +5,7 @@ $(document).ready(function(){
 console.log(window.location.href);
 var params = window.location.href.substring(27).split('=').join('').split('&').join('').split('one')
 params.shift()
-
+console.log(params);
   var userId = params[0]
   var linkId = params[1]
   var customerId = params[2]
@@ -13,8 +13,8 @@ params.shift()
   $.get('/api/user/' + userId, function(biz,status,xhr){
     $('.bizName').text(biz[0].businessname)
   })
-  $.get('/api/link/' + linkId, function(link, status, xhr){
-    $(".yes").attr("href", "http://www.cnn.com");
+  $.get('/api/link/' + linkId, function(theLink, status, xhr){
+    $(".yes").attr("href", theLink);
   })
   $('.yes').on('click', function(){
     $.ajax({
