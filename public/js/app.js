@@ -1,5 +1,6 @@
-angular.module('yesOrNo', []).config(function(){
+angular.module('yesOrNo', []).config(function($locationProvider){
 
+  $locationProvider.html5Mode(true);
 
 
 })
