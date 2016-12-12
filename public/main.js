@@ -3,9 +3,9 @@ $(document).ready(function(){
   $('.yesOrNoSection').show()
   $('.noFormSection').hide()
 console.log(window.location.href);
-var params = t.substring(27).split('=').join('').split('&').join('').split('one')
+var params = window.location.href.substring(27).split('=').join('').split('&').join('').split('one')
 params.shift()
-  // var params = window.location.href.substring(22).split('/')
+
   var userId = params[0]
   var linkId = params[1]
   var customerId = params[2]
