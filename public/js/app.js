@@ -1,7 +1,6 @@
-angular.module('yesOrNo', []).config(function($locationProvider, $urlRouterProvider){
+angular.module('yesOrNo', []).config(function($locationProvider){
 
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/')
+  // $locationProvider.html5Mode(true);
 
 
 })
