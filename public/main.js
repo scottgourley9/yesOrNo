@@ -14,7 +14,7 @@ console.log(params);
     $('.bizName').text(biz[0].businessname)
   })
   $.get('/api/link/' + linkId, function(theLink, status, xhr){
-    $(".yes").attr("href", theLink);
+    $(".yes").attr("href", theLink[0].reviewlink);
   })
   $('.yes').on('click', function(){
     $.ajax({
