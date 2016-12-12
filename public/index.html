@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="yesOrNo">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Yes or No</title>
+    <link rel="stylesheet" href="./css/style.css" media="screen" title="no title">
+    <link href="https://file.myfontastic.com/se8pWz5f5KvFppJ3X5NBJj/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+  </head>
+  <body style="font-family: 'Poiret One', cursive;"ng-controller="yesOrNoCtrl">
+    <section ng-if='yesOrNoSectionShowing'class="yesOrNoSection">
+  <h1 class="">Would you recommend {{user.businessname}} to your friends or family?</h1>
+  <a class=""ng-href="{{reviewLink}}" ng-click="clickedYes()">YES</a>
+  <div class="" ng-click="clickedNo()">NO</div>
+</section>
+<section ng-if="noFromSectionShowing"class="noFormSection">
+    <h1>We are sorry to hear that</h1>
+    <h1>What could we have done better?</h1>
+    <textarea type="text" name="name" ng-model='complaint'></textarea>
+    <button type="button" name="button" ng-click='submit(complaint)'>Submit</button>
+</section>
+<section ng-if="thankYouSection"class="noFormSection">
+  <h1>Thank You for your feedback!</h1>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/controllers/yesOrNoCtrl.js"></script>
+<script src="./js/services/linksService.js"></script>
+<script src="./js/services/messageService.js"></script>
+<script src="./js/services/userService.js"></script>
+
+  </body>
+</html>
