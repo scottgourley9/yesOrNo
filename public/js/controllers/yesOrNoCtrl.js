@@ -4,7 +4,7 @@ angular.module('yesOrNo').controller('yesOrNoCtrl', function($scope, linksServic
   $scope.noFromSectionShowing = false;
   $scope.thankYouSection = false;
 // console.log(window.location.href)
-  var params = window.location.href.substring(23).split('/')
+  var params = window.location.href.substring(25).split('/')
 var userId = params[0]
 var linkId = params[1]
 var customerId = params[2]
