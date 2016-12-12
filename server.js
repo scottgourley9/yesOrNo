@@ -183,6 +183,7 @@ app.put('/api/customers/:id', function(req, res){
 })
 
 app.get('/api/user/:id', function(req, res){
+  console.log(req.body);
   db.get_user_by_id([req.params.id], function(err, user){
     if(err){
       res.status(500).json(err)
@@ -416,6 +417,7 @@ app.put('/api/negativemessage/:id', function(req, res){
 })
 
 app.put('/api/complaint/:id', function(req, res){
+  console.log(req.body);
   db.complaint([req.params.id, req.body.complaint], function(err, success){
     if(err){
       res.status(500).json(err)
