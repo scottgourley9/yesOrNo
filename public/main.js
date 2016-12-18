@@ -18,7 +18,7 @@ console.log(params);
   })
   $('.yes').on('click', function(){
     $.ajax({
-    url: 'http://www.in-sightreviews.com/api/positivemessage/' + messageId + '/' + customerId,
+    url: 'http://www.in-sightreviews.com/api/positivemessage/' + messageId + '/' + customerId + '/' + userId,
     type: 'PUT',
     success: function(result) {
         console.log(result);
@@ -38,7 +38,7 @@ console.log(params);
   })
   $('button').on('click', function(){
     var complaint = $('textarea').val()
-    $.post('http://www.in-sightreviews.com/api/complaint/' + messageId + '/' + complaint + '/' + customerId, {complaint: complaint}, function(result){
+    $.post('http://www.in-sightreviews.com/api/complaint/' + messageId + '/' + complaint + '/' + customerId + '/' + userId, {complaint: complaint}, function(result){
       $('.noFormSection').hide()
       $('.thankYou').show()
     })
