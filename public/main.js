@@ -41,7 +41,7 @@ console.log(params);
     $.ajax({
     url: 'http://www.in-sightreviews.com/api/complaint/' + messageId,
     type: 'PUT',
-    data: {complaint: complaint},
+    data: complaint,
     success: function(result) {
       $('.noFormSection').hide()
       $('.thankYou').show()
