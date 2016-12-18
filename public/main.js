@@ -18,7 +18,7 @@ console.log(params);
   })
   $('.yes').on('click', function(){
     $.ajax({
-    url: 'http://www.in-sightreviews.com/api/positivemessage/' + messageId,
+    url: 'http://www.in-sightreviews.com/api/positivemessage/' + messageId + '/' + customerId,
     type: 'PUT',
     success: function(result) {
         console.log(result);
