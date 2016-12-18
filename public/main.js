@@ -38,15 +38,10 @@ console.log(params);
   })
   $('button').on('click', function(){
     var complaint = $('textarea').val()
-    $.ajax({
-    url: 'http://www.in-sightreviews.com/api/complaint/' + messageId,
-    type: 'POST',
-    data: {complaint: complaint},
-    success: function(result) {
+    $.post('http://www.in-sightreviews.com/api/complaint/' + messageId, {complaint: complaint}, function(result){
       $('.noFormSection').hide()
       $('.thankYou').show()
-    }
-  });
+    })
 
 
   })
