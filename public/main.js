@@ -10,8 +10,8 @@ console.log(params);
   var linkId = params[1]
   var customerId = params[2]
   var messageId = params[3]
-  $.get('http://www.in-sightreviews.com/api/user/' + userId, function(biz,status,xhr){
-    $('.bizName').text(biz[0].businessname)
+  $.get('http://www.in-sightreviews.com/api/user/' + userId, function(user,status,xhr){
+    $('.bizName').text(user[0].businessname)
   })
   $.get('http://www.in-sightreviews.com/api/link/' + linkId, function(theLink, status, xhr){
     $(".yes").attr("href", theLink[0].reviewlink);
@@ -40,8 +40,8 @@ console.log(params);
     var complaint = $('textarea').val()
     $.ajax({
     url: 'http://www.in-sightreviews.com/api/complaint/' + messageId,
-    type: 'PUT',
-    data: complaint,
+    type: 'POST',
+    data: {complaint: complaint},
     success: function(result) {
       $('.noFormSection').hide()
       $('.thankYou').show()
