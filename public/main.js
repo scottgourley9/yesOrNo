@@ -38,7 +38,7 @@ console.log(params);
   })
   $('button').on('click', function(){
     var complaint = $('textarea').val()
-    $.post('http://www.in-sightreviews.com/api/complaint/' + messageId + '/' + complaint + '/' + customerId + '/' + userId, {complaint: complaint}, function(result){
+    $.post('https://www.in-sightreviews.com/api/complaint/' + messageId + '/' + complaint + '/' + customerId + '/' + userId, {complaint: complaint}, function(result){
       $('.noFormSection').hide()
       $('.thankYou').show()
     })
