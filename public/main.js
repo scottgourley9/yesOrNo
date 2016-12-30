@@ -10,15 +10,15 @@ console.log(params);
   var linkId = params[1]
   var customerId = params[2]
   var messageId = params[3]
-  $.get('http://www.in-sightreviews.com/api/user/' + userId, function(user,status,xhr){
+  $.get('https://www.in-sightreviews.com/api/user/' + userId, function(user,status,xhr){
     $('.bizName').text(user[0].businessname)
   })
-  $.get('http://www.in-sightreviews.com/api/link/' + linkId, function(theLink, status, xhr){
+  $.get('https://www.in-sightreviews.com/api/link/' + linkId, function(theLink, status, xhr){
     $(".yes").attr("href", theLink[0].reviewlink);
   })
   $('.yes').on('click', function(){
     $.ajax({
-    url: 'http://www.in-sightreviews.com/api/positivemessage/' + messageId + '/' + customerId + '/' + userId,
+    url: 'https://www.in-sightreviews.com/api/positivemessage/' + messageId + '/' + customerId + '/' + userId,
     type: 'PUT',
     success: function(result) {
         console.log(result);
@@ -27,7 +27,7 @@ console.log(params);
   })
   $('.no').on('click', function(){
     $.ajax({
-    url: 'http://www.in-sightreviews.com/api/negativemessage/' + messageId,
+    url: 'https://www.in-sightreviews.com/api/negativemessage/' + messageId,
     type: 'PUT',
     success: function(result) {
       $('.thankYou').hide()
