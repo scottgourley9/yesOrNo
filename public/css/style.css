@@ -39,6 +39,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
 }
 .noFormSection {
   display: flex;
@@ -48,8 +49,10 @@ button {
 
 .yesOrNoSection h1 {
   text-align: center;
-  font-size: 30px;
-  /*margin-bottom: 10vh;*/
+      font-size: 30px;
+      /* margin-bottom: 10vh; */
+      margin-top: 0vh;
+      margin-bottom: 0vw;
 }
 .yesOrNoSection div {
   /*margin-bottom: 10vh;*/
