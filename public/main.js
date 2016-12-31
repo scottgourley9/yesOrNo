@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+
   $('.thankYou').hide()
   $('.yesOrNoSection').show()
   $('.noFormSection').hide()
@@ -45,5 +47,8 @@ console.log(params);
 
 
   })
+
+
+
 
 })
