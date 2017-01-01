@@ -34,6 +34,9 @@ button {
   margin-right: 3vw;
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 .buttons {
   width: 100%;
   display: flex;
