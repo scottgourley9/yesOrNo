@@ -62,11 +62,7 @@ a {
   font-size: 50px;
 }
 .yesOrNoSection a {
-  margin-bottom: 1vw !important;
-  /*font-size: 50px;
-  margin-top: 10vh !important;
-
-
-  text-decoration: none;
-  color: inherit;*/
+  display: flex;
+justify-content: center;
+align-items: center;
 }
